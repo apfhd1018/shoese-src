@@ -1,0 +1,36 @@
+@import "./reset.scss";
+
+$mainColor: #ff0000;
+
+.wow-enter {
+  //애니메이션 시작 때 적용할 CSS
+  opacity: 0;
+}
+.wow-enter-active {
+  // 애니메이션 동작 때 적용할 CSS
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.red {
+  color: $mainColor;
+}
+@mixin 함수() {
+  background: #eeeeee;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+.my-alert {
+  @include 함수();
+}
+.my-alert2 {
+  @extend .my-alert;
+  background: #f0efeb;
+}
+
+.my-alert p {
+  margin-bottom: 0;
+}
